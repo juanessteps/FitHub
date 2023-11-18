@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+            </svg>
+        </div>
+        <h1>FIT HUB</h1>
+        <div class="user-info-header">
+            <div id="nombreUsuario" class="user-data-header"></div>
+            <div id="pesoUsuario" class="user-data-header"></div>
+        </div>
+        
+        
+    </header>
+    <div class="container-items">
+        <div class="item">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="producto" />
+            </figure>
+
+            
+
+            <div class="info-product">
+                <h2>Aerobicos</h2>
+                <p class="price">$80.000</p>
+                <a href="Aerobic.html"><button>MAS INFO</button></a> <!-- Actualizado el enlace -->
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h2>Abdomen</h2>
+                <p class="price">$50.000</p>
+                <a href="Abdomen.html"><button>MAS INFO</button></a> <!-- Actualizado el enlace -->
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1571019613914-85f342c6a11e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="producto" />
+            </figure>
+            <div class="info-product">
+                <h2>Tren Inferior</h2>
+                <p class="price">$50.000</p>
+                <a href="Rub.html"><button>MAS INFO</button></a> <!-- Actualizado el enlace -->
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart" class="cart-panel">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        window.onload = function() {
+            var nombre = localStorage.getItem('Nombre');
+            var peso = localStorage.getItem('Peso');
+
+            if(nombre && peso) {
+                document.getElementById('nombreUsuario').innerText = 'Nombre: ' + nombre;
+                document.getElementById('pesoUsuario').innerText = 'Peso: ' + peso;
+            } else {
+                document.querySelector('.user-info').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

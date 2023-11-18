@@ -1,0 +1,117 @@
+/* Estilos Globales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #fdfbfb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Contenedor Principal */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* Información de la Sesión */
+.session-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.session-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex-basis: 35%;
+}
+
+.info-container {
+    flex-basis: 60%;
+}
+
+.info-container h2 {
+    color: #d35400;
+    margin-top: 0;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #d35400;
+}
+
+.details {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.details h3, .details h4, .details h5 {
+    color: #333;
+}
+
+.schedule-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.schedule-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule-item ul li {
+    background: #e7e7e7;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #d35400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #c04000;
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .session-info {
+        flex-direction: column;
+    }
+
+    .session-image, .info-container {
+        flex-basis: 100%;
+    }
+}

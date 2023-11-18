@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="EstiloF.css">
+</head>
+<body>
+    <section class="form-register">
+        <h4>Formulario Registro</h4>
+        <form id="formRegistro">
+            <input class="controls" type="text" name="Nombre" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="Peso" id="pesos" placeholder="Ingrese su Peso">
+            <input class="controls" type="text" name="Edad" id="edad" placeholder="Ingrese su Edad">
+            <input class="controls" type="text" name="Id" id="id" placeholder="Ingrese su Cedula">
+            <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones  </a></p>
+            <input class="botons" type="submit" value="Registrar">
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('formRegistro').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var nombre = document.getElementById('nombres').value;
+            var peso = document.getElementById('pesos').value;
+
+            localStorage.setItem('Nombre', nombre);
+            localStorage.setItem('Peso', peso);
+
+            // Redireccionar a la página de la tienda
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
